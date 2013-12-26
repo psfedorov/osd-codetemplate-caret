@@ -1,0 +1,32 @@
+<extension id="none.psfedorov.osdcodetemplatecaret" version="1.0.0" esdk-version="2.0"
+           rsbundle-class="none.psfedorov.osdcodetemplatecaret.Res" xmlns="http://jcp.org/jsr/198/extension-manifest">
+  <name>OSD Code Template Caret</name>
+  <owner>Pavel Fedorov</owner>
+  <trigger-hooks xmlns="http://xmlns.oracle.com/ide/extension">
+    <!-- Declare triggering functionality provided by extension: none.psfedorov.osdcodetemplatecaret -->
+    <triggers>
+      <actions xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
+        <action id="none.psfedorov.osdcodetemplatecaret.CTC">
+          <properties>
+            <property name="Name">Code Template (w/caret)</property>
+          </properties>
+          <command-class>none.psfedorov.osdcodetemplatecaret.CTCCommand</command-class>
+        </action>
+      </actions>
+      <context-menu-hook rule="always-enabled">
+        <site idref="editor"/>
+        <menu>
+          <section id="NONEPSFEDOROVSECTION" xmlns="http://jcp.org/jsr/198/extension-manifest" weight="100.0">
+            <item action-ref="none.psfedorov.osdcodetemplatecaret.CTC"/>
+          </section>
+        </menu>
+      </context-menu-hook>
+      <accelerator-hook>
+        <file>META-INF/accelerators.xml</file>
+      </accelerator-hook>
+    </triggers>
+  </trigger-hooks>
+  <hooks>
+    <!-- Declare functionality provided by extension: none.psfedorov.osdcodetemplatecaret -->
+  </hooks>
+</extension>
