@@ -1,6 +1,6 @@
-OSD Code Template Caret, version 1.0.0
+OSD Code Template Caret, version 1.0.1
 
-Copyright (c) 2013, Pavel Fedorov
+Copyright (c) 2013-2015, Pavel Fedorov
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
