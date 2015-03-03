@@ -31,8 +31,8 @@ public class BlockCommentCommand extends Command {
         String selectedText = pane.getSelectedText();
         if (selectedText != null) {
             pane.replaceSelection((selectedText.startsWith("/*") && selectedText.endsWith("*/"))
-                ? selectedText.substring(2, selectedText.length() - 2)
-                : "/*" + selectedText + "*/"
+                ? selectedText.substring(2, selectedText.length() - 2).replace("\\*", "/*").replace("*\\", "*/")
+                : "/*" + selectedText.replace("/*", "\\*").replace("*/", "*\\") + "*/"
             );
         }
         return OK;
