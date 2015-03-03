@@ -1,4 +1,4 @@
-<extension id="none.psfedorov.osdcodetemplatecaret" version="1.0.0" esdk-version="2.0"
+<extension id="none.psfedorov.osdcodetemplatecaret" version="1.0.1" esdk-version="2.0"
            rsbundle-class="none.psfedorov.osdcodetemplatecaret.Res" xmlns="http://jcp.org/jsr/198/extension-manifest">
   <name>OSD Code Template Caret</name>
   <owner>Pavel Fedorov</owner>
@@ -12,12 +12,19 @@
           </properties>
           <command-class>none.psfedorov.osdcodetemplatecaret.CTCCommand</command-class>
         </action>
+        <action id="none.psfedorov.osdcodetemplatecaret.BlockComment">
+          <properties>
+            <property name="Name">Block Comment</property>
+          </properties>
+          <command-class>none.psfedorov.osdcodetemplatecaret.BlockCommentCommand</command-class>
+        </action>
       </actions>
       <context-menu-hook rule="always-enabled">
         <site idref="editor"/>
         <menu>
           <section id="NONEPSFEDOROVSECTION" xmlns="http://jcp.org/jsr/198/extension-manifest" weight="100.0">
             <item action-ref="none.psfedorov.osdcodetemplatecaret.CTC"/>
+            <item action-ref="none.psfedorov.osdcodetemplatecaret.BlockComment"/>
           </section>
         </menu>
       </context-menu-hook>

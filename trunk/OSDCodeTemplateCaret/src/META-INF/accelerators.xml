@@ -4,5 +4,8 @@
         <map action="none.psfedorov.osdcodetemplatecaret.CTC">
             <accel>control T</accel>
         </map>
+        <map action="none.psfedorov.osdcodetemplatecaret.BlockComment">
+            <accel>control SLASH</accel>
+        </map>
     </preset>
 </context>
